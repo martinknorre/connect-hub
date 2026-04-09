@@ -51,6 +51,21 @@ export default {
           DEFAULT: "hsl(var(--warning))",
           foreground: "hsl(var(--warning-foreground))",
         },
+        aqua: {
+          DEFAULT: "hsl(var(--vf-aqua))",
+        },
+        turquoise: {
+          DEFAULT: "hsl(var(--vf-turquoise))",
+        },
+        lemon: {
+          DEFAULT: "hsl(var(--vf-lemon))",
+        },
+        violet: {
+          DEFAULT: "hsl(var(--vf-red-violet))",
+        },
+        aubergine: {
+          DEFAULT: "hsl(var(--vf-aubergine))",
+        },
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
