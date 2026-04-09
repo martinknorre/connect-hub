@@ -35,12 +35,12 @@ export function UsageChart() {
         <AreaChart data={data}>
           <defs>
             <linearGradient id="colorDown" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="hsl(210, 100%, 56%)" stopOpacity={0.3} />
-              <stop offset="95%" stopColor="hsl(210, 100%, 56%)" stopOpacity={0} />
+              <stop offset="5%" stopColor="hsl(0, 100%, 45%)" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="hsl(0, 100%, 45%)" stopOpacity={0} />
             </linearGradient>
             <linearGradient id="colorUp" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="5%" stopColor="hsl(170, 80%, 50%)" stopOpacity={0.3} />
-              <stop offset="95%" stopColor="hsl(170, 80%, 50%)" stopOpacity={0} />
+              <stop offset="5%" stopColor="hsl(189, 100%, 40%)" stopOpacity={0.3} />
+              <stop offset="95%" stopColor="hsl(189, 100%, 40%)" stopOpacity={0} />
             </linearGradient>
           </defs>
           <CartesianGrid strokeDasharray="3 3" stroke="hsl(222, 30%, 16%)" />
