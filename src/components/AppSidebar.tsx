@@ -1,6 +1,6 @@
 import {
   LayoutDashboard,
-  Sim,
+  Smartphone,
   Settings2,
   FileBarChart,
   Zap,
@@ -29,7 +29,7 @@ import {
 
 const mainItems = [
   { title: "Dashboard", url: "/", icon: LayoutDashboard },
-  { title: "SIM Cards", url: "/sims", icon: Sim },
+  { title: "SIM Cards", url: "/sims", icon: Smartphone },
   { title: "Service Profiles", url: "/profiles", icon: Shield },
   { title: "Operations", url: "/operations", icon: Zap },
   { title: "Reports", url: "/reports", icon: FileBarChart },
