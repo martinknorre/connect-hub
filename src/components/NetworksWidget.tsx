@@ -1,9 +1,9 @@
 const networks = [
-  { name: "Vodafone DE", usage: "234 GB", sessions: "12.4K", pct: 85 },
-  { name: "Vodafone UK", usage: "189 GB", sessions: "9.8K", pct: 68 },
-  { name: "Vodafone IT", usage: "156 GB", sessions: "7.2K", pct: 56 },
-  { name: "Vodafone ES", usage: "98 GB", sessions: "5.1K", pct: 35 },
-  { name: "Vodafone NL", usage: "67 GB", sessions: "3.4K", pct: 24 },
+  { name: "Vodafone DE", usage: "234 GB", sessions: "12.4K", pct: 85, color: "bg-primary" },
+  { name: "Vodafone UK", usage: "189 GB", sessions: "9.8K", pct: 68, color: "bg-aqua" },
+  { name: "Vodafone IT", usage: "156 GB", sessions: "7.2K", pct: 56, color: "bg-turquoise" },
+  { name: "Vodafone ES", usage: "98 GB", sessions: "5.1K", pct: 35, color: "bg-lemon" },
+  { name: "Vodafone NL", usage: "67 GB", sessions: "3.4K", pct: 24, color: "bg-violet" },
 ];
 
 export function NetworksWidget() {
@@ -21,7 +21,7 @@ export function NetworksWidget() {
               </div>
               <div className="w-full h-1.5 bg-muted rounded-full overflow-hidden">
                 <div
-                  className="h-full rounded-full bg-primary transition-all duration-500"
+                  className={`h-full rounded-full ${n.color} transition-all duration-500`}
                   style={{ width: `${n.pct}%` }}
                 />
               </div>
