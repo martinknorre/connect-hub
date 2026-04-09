@@ -43,19 +43,19 @@ export function UsageChart() {
               <stop offset="95%" stopColor="hsl(189, 100%, 40%)" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <CartesianGrid strokeDasharray="3 3" stroke="hsl(222, 30%, 16%)" />
-          <XAxis dataKey="date" tick={{ fill: "hsl(215, 20%, 55%)", fontSize: 11 }} axisLine={false} tickLine={false} />
-          <YAxis tick={{ fill: "hsl(215, 20%, 55%)", fontSize: 11 }} axisLine={false} tickLine={false} unit=" GB" />
+          <CartesianGrid strokeDasharray="3 3" stroke="hsl(210, 3%, 18%)" />
+          <XAxis dataKey="date" tick={{ fill: "hsl(210, 3%, 55%)", fontSize: 11 }} axisLine={false} tickLine={false} />
+          <YAxis tick={{ fill: "hsl(210, 3%, 55%)", fontSize: 11 }} axisLine={false} tickLine={false} unit=" GB" />
           <Tooltip
             contentStyle={{
-              backgroundColor: "hsl(222, 47%, 9%)",
-              border: "1px solid hsl(222, 30%, 16%)",
+              backgroundColor: "hsl(210, 3%, 9%)",
+              border: "1px solid hsl(210, 3%, 18%)",
               borderRadius: "8px",
               fontSize: "12px",
             }}
           />
-          <Area type="monotone" dataKey="download" stroke="hsl(210, 100%, 56%)" fillOpacity={1} fill="url(#colorDown)" strokeWidth={2} />
-          <Area type="monotone" dataKey="upload" stroke="hsl(170, 80%, 50%)" fillOpacity={1} fill="url(#colorUp)" strokeWidth={2} />
+          <Area type="monotone" dataKey="download" stroke="hsl(0, 100%, 45%)" fillOpacity={1} fill="url(#colorDown)" strokeWidth={2} />
+          <Area type="monotone" dataKey="upload" stroke="hsl(189, 100%, 40%)" fillOpacity={1} fill="url(#colorUp)" strokeWidth={2} />
         </AreaChart>
       </ResponsiveContainer>
     </div>
