@@ -32,7 +32,7 @@ const statusStyles: Record<string, string> = {
   Active: "bg-success/10 text-success",
   Suspended: "bg-warning/10 text-warning",
   Inactive: "bg-muted text-muted-foreground",
-  "Test Ready": "bg-primary/10 text-primary",
+  "Test Ready": "bg-aqua/10 text-aqua",
 };
 
 export default function SimCards() {

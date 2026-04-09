@@ -26,7 +26,7 @@ export function UsageChart() {
             <span className="text-xs text-muted-foreground">Download</span>
           </div>
           <div className="flex items-center gap-1.5">
-            <span className="w-2.5 h-0.5 rounded-full bg-accent" />
+            <span className="w-2.5 h-0.5 rounded-full bg-aqua" />
             <span className="text-xs text-muted-foreground">Upload</span>
           </div>
         </div>

@@ -15,10 +15,10 @@ export default function Dashboard() {
 
       {/* Stats */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        <StatCard icon={Smartphone} label="Total SIMs" value="12,847" change="+124 this month" changeType="positive" />
-        <StatCard icon={Wifi} label="Connected" value="11,293" change="87.9% connectivity" changeType="positive" />
-        <StatCard icon={Activity} label="Data Usage" value="1.2 TB" change="+8.3% vs last month" changeType="positive" />
-        <StatCard icon={Globe} label="Active Networks" value="23" change="Across 14 countries" changeType="neutral" />
+        <StatCard icon={Smartphone} label="Total SIMs" value="12,847" change="+124 this month" changeType="positive" accent="primary" />
+        <StatCard icon={Wifi} label="Connected" value="11,293" change="87.9% connectivity" changeType="positive" accent="aqua" />
+        <StatCard icon={Activity} label="Data Usage" value="1.2 TB" change="+8.3% vs last month" changeType="positive" accent="turquoise" />
+        <StatCard icon={Globe} label="Active Networks" value="23" change="Across 14 countries" changeType="neutral" accent="lemon" />
       </div>
 
       {/* Quick Actions */}
