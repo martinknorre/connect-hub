@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Shield, Plus, MoreHorizontal, Wifi, MessageSquare, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -16,6 +17,8 @@ const serviceIcon: Record<string, React.ElementType> = {
 };
 
 export default function ServiceProfiles() {
+  const navigate = useNavigate();
+  const slugify = (s: string) => s.toLowerCase().replace(/\s+/g, "-");
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div className="flex items-center justify-between">
@@ -31,7 +34,7 @@ export default function ServiceProfiles() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {profiles.map((p) => (
-          <div key={p.name} className="glass-card-hover p-5 space-y-4">
+          <div key={p.name} className="glass-card-hover p-5 space-y-4 cursor-pointer" onClick={() => navigate(`/profiles/${slugify(p.name)}`)}>
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-primary/10">
