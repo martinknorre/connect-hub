@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { FileBarChart, Download, Calendar, Plus, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -18,6 +19,8 @@ const typeColors: Record<string, string> = {
 };
 
 export default function Reports() {
+  const navigate = useNavigate();
+  const slugify = (s: string) => s.toLowerCase().replace(/\s+/g, "-");
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div className="flex items-center justify-between">
@@ -33,7 +36,7 @@ export default function Reports() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {reports.map((r) => (
-          <div key={r.name} className="glass-card-hover p-5 space-y-4">
+          <div key={r.name} className="glass-card-hover p-5 space-y-4 cursor-pointer" onClick={() => navigate(`/reports/${slugify(r.name)}`)}>
             <div className="flex items-start justify-between">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-muted">

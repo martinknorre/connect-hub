@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Settings2, Globe, Lock, Bell, Key, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -11,6 +12,8 @@ const sections = [
 ];
 
 export default function Configuration() {
+  const navigate = useNavigate();
+  const slugify = (s: string) => s.toLowerCase().replace(/\s+/g, "-");
   return (
     <div className="space-y-6 max-w-[1400px]">
       <div>
@@ -20,7 +23,7 @@ export default function Configuration() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {sections.map((s) => (
-          <div key={s.title} className="glass-card-hover p-5 space-y-3 group cursor-pointer">
+          <div key={s.title} className="glass-card-hover p-5 space-y-3 group cursor-pointer" onClick={() => navigate(`/configuration/${slugify(s.title)}`)}>
             <div className="flex items-start gap-3">
               <div className="p-2.5 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
                 <s.icon className="w-5 h-5 text-primary" />

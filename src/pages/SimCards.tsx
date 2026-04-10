@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Search, Filter, Download, Plus, MoreHorizontal, ChevronLeft, ChevronRight } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -37,6 +38,7 @@ const statusStyles: Record<string, string> = {
 
 export default function SimCards() {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
   const filtered = sims.filter(
     (s) => s.iccid.includes(search) || s.imsi.includes(search) || s.status.toLowerCase().includes(search.toLowerCase())
   );
@@ -92,7 +94,7 @@ export default function SimCards() {
           </TableHeader>
           <TableBody>
             {filtered.map((sim) => (
-              <TableRow key={sim.iccid} className="border-border/30 hover:bg-muted/20 cursor-pointer transition-colors">
+              <TableRow key={sim.iccid} className="border-border/30 hover:bg-muted/20 cursor-pointer transition-colors" onClick={() => navigate(`/sims/${sim.iccid}`)}>
                 <TableCell className="font-mono text-sm">{sim.iccid}</TableCell>
                 <TableCell className="font-mono text-sm text-muted-foreground">{sim.imsi}</TableCell>
                 <TableCell>
