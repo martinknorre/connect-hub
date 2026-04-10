@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Bell, Plus, ToggleLeft, ToggleRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
@@ -11,6 +12,7 @@ const initialTriggers = [
 ];
 
 export default function EventTriggers() {
+  const navigate = useNavigate();
   const [triggers, setTriggers] = useState(initialTriggers);
 
   const toggle = (id: number) => {
@@ -32,7 +34,7 @@ export default function EventTriggers() {
 
       <div className="space-y-3">
         {triggers.map((t) => (
-          <div key={t.id} className={`glass-card p-5 flex items-center gap-4 transition-opacity ${!t.enabled ? "opacity-50" : ""}`}>
+          <div key={t.id} className={`glass-card p-5 flex items-center gap-4 transition-opacity cursor-pointer ${!t.enabled ? "opacity-50" : ""}`} onClick={() => navigate(`/triggers/${t.id}`)}>
             <div className="p-2 rounded-lg bg-primary/10">
               <Bell className="w-5 h-5 text-primary" />
             </div>
